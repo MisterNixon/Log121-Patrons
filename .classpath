@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="patron_MVC"/>
+	<classpathentry kind="src" path="patron_Observer"/>
+	<classpathentry kind="src" path="patron_ChainOfResponsibility"/>
+	<classpathentry kind="src" path="patron_Facade"/>
+	<classpathentry kind="src" path="patron_Strategie"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
