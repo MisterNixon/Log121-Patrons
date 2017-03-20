@@ -9,8 +9,13 @@ import java.util.Vector;
  * either a String object or an object that implements an interface called
  * RichText.  Any kind of an object can be provided as the content of an
  * attachment. 
+ * 
+ * ************************************
+ * Ceci est la Facade !!!!
+ * ************************************
+ * 
  */
-public class MessageCreator {
+public class MessageCreator_Facade {
     // Constants to indicate the type of message to create
     public final static int MIME = 1;
     public final static int MAPI = 2;
@@ -30,7 +35,7 @@ public class MessageCreator {
      * @param from The address that the message will say it is from.
      * @param subject The subject of this message.
      */
-    public MessageCreator(String to, String from, String subject) {
+    public MessageCreator_Facade(String to, String from, String subject) {
         this(to, from , subject, inferMessageType(to));
     } // Constructor(String, String, String)
 
@@ -43,7 +48,7 @@ public class MessageCreator {
      * @param subject The subject of this message.
      * @param type The type of message to create.
      */
-    public MessageCreator(String to, String from, String subject, int type) {
+    public MessageCreator_Facade(String to, String from, String subject, int type) {
         headerFields.put("to", to);
         headerFields.put("from", from);
         headerFields.put("subject", subject);

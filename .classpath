@@ -6,6 +6,8 @@
 	<classpathentry kind="src" path="patron_ChainOfResponsibility"/>
 	<classpathentry kind="src" path="patron_Facade"/>
 	<classpathentry kind="src" path="patron_Strategie"/>
+	<classpathentry kind="src" path="patron_Adapter"/>
+	<classpathentry kind="src" path="patron_NullObject"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

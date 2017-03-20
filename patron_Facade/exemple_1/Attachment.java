@@ -9,7 +9,5 @@ class Attachment {
      *                attachment.
      */
      Attachment(Object content) {
-         //...
-     } // Constructor(Object)
-    //...
-} // class Attachment
+     }
+}

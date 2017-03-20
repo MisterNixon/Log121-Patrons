@@ -4,5 +4,5 @@ package exemple_1;
  * for signing an e-mail message.
  */
 class Security {
-    //...
-} // class Security
+	
+} 

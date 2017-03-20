@@ -5,4 +5,4 @@ package exemple_1;
  */
 public interface RichText {
     //...
-} // interface RichText
+}

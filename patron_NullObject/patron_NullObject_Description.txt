@@ -1,0 +1,57 @@
+Le patron Null Object 
+
+Contexte : 
+	-> On veut un objet qui ne fait rien.
+	-> Utilisé quand on ne veut rien à faire et éviter
+		d’avoir à tester la présence d’une référence à
+		« null » dans le code.
+	-> Un programme délègue normalement une
+		partie de sa fonctionnalité à une autre.
+	-> Dans certains cas, on veut que le délégué ne
+		fasse rien.
+			-> Par exemple, afficher des messages (à la console
+				ou dans un fichier) lorsqu’on fait des tests.
+			-> Retirer les messages lorsque le programme va en
+				production
+		
+Exemple : 
+Class App{
+	private PrintStream d;
+	public App(PrintStream d){this.d = d;}
+	public void do(){
+		d.printLn("Bonjour");
+		d.printLn("Je suis en Debug");
+		//Calcul...
+		d.print(resultat);
+	}
+}
+
+Class NullOutPutStream extends OutPutStream{
+	public write(int b){//rien faire}
+}
+
+Class NullPrintStream extends PrintStream{
+	public NullPrintStream(){
+		super(new NullOutPutStream());
+	}
+}
+
+class MainApp{
+	public static void main(String[] args){
+		App A = new App(new NullPrintStream());
+		A.do();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
