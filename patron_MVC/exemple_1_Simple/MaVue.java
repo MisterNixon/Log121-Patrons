@@ -4,10 +4,12 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Point;
@@ -59,14 +61,15 @@ public class MaVue extends JFrame implements Observer {
 		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		
 		setContentPane(contentPane);
 		contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.PAGE_AXIS));
 		
 		txtMonTexte = new JTextField();
 		txtMonTexte.setFont(new Font("Lucida Grande", Font.PLAIN, 40));
+		
 		contentPane.add(txtMonTexte);
 		txtMonTexte.setColumns(10);
-		
 		/*
 		 * À la création de la vue, il faut initialiser les éléments de la vue
 		 * (i.e. txtMonTexte) avec les informations contenues dans le modèle.
@@ -117,6 +120,7 @@ public class MaVue extends JFrame implements Observer {
 		Color couleur = monModele.getLaCouleur();
 		txtMonTexte.setText(texte);
 		txtMonTexte.setForeground(couleur);
+		
 	}
 	
 	public String getMonTexte() {

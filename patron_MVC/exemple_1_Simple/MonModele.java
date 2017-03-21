@@ -1,7 +1,11 @@
 package exemple_1_Simple;
 
 import java.awt.Color;
+import java.io.File;
 import java.util.Observable;
+
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  * Données de l'application.
@@ -16,12 +20,17 @@ import java.util.Observable;
 public class MonModele extends Observable {
 	private String leTexte;	
 	private Color laCouleur;
-
+	private ImageIcon image;
+	
 	public MonModele() {
 		leTexte = "";	
 		laCouleur = Color.BLACK;	
 	}
 
+	public ImageIcon getImage(){
+		return image;
+	}
+	
 	public String getLeTexte() {
 		return leTexte;
 	}
