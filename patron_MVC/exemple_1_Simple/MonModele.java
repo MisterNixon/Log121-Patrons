@@ -1,11 +1,9 @@
 package exemple_1_Simple;
 
 import java.awt.Color;
-import java.io.File;
 import java.util.Observable;
 
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
 
 /**
  * Données de l'application.

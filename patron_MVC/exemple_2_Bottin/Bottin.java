@@ -18,7 +18,7 @@ import javax.swing.DefaultListModel;
  */
 @SuppressWarnings("serial")
 public class Bottin extends DefaultListModel<Fiche> {
-	public final static String NOM_FICHIER = "/users/vincent/Desktop/Bottin.txt";
+	public final static String NOM_FICHIER = "bottin.txt";
 
 	/**
 	 * Constructeur du bottin 
@@ -37,6 +37,12 @@ public class Bottin extends DefaultListModel<Fiche> {
 	    	File fichier = new File(NOM_FICHIER);
 	    	if (fichier.exists()) {
 	    		BufferedReader in = new BufferedReader(new FileReader(fichier));
+	    		
+	    		/*
+	    		 * Donc ici, on lit le fichier et lorsqu'une fiche est pleine, on l'ajoute
+	    		 * au bottin. On obtient donc plusieurs fiches contenant les informations 
+	    		 * necessaire pour identifier quelqu'un.
+	    		 */
 	    		while(in.ready()) addElement(Fiche.lire(in));
 	    		in.close();
 	    	}
