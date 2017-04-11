@@ -106,7 +106,7 @@ public class MaVue extends JFrame implements Observer {
 		btnChangerCouleur.addActionListener(monControleur);
 		
 		setVisible(true);		
-		btnNouvelleFenetre.requestFocus();	
+		//btnNouvelleFenetre.requestFocus();	
 	}
 
 	/*
